@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crocheting</title>
+
+    <style>
+      body {
+        background-color: plum;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid plum;
+        background: white;
+        font-size: 24px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: plum;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      footer {
+        text-align: center;
+        margin: 20px;
+        color: white;
+        font-size: 20px;
+      }
+
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+
+      .theme-button:hover {
+        cursor: pointer;
+        color: black;
+        background: white;
+      }
+
+      .crochet-intro-picture {
+        border-radius: 10px;
+        transition: opacity 150ms ease-in-out;
+      }
+
+      .crochet-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.3);
+      }
+
+      .dark {
+        background-color: black;
+        color: white;
+      }
+
+      .dark .container {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>Crocheting 🧶</h1>
+      <h2>My favorite hobbie</h2>
+
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/557/original/A_Guide_to_Knitting_Yarn__Types__Weights__and_How_to_Choose_It.jfif?1727553345"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/554/original/ocean_crochet_bag_%E2%80%A2_Instagram.jfif?1727553296"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/556/original/CROCHET_BY_MIKIEE_on_Instagram__%E2%80%9CNEW_CONFETTI%E2%80%A6.jfif?1727553330"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/555/original/d6b3034d-f41a-4239-b3c5-2ee232738686.jfif?1727553313"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/558/original/Cute_Crochet_Turtle_Patterns_-_Beautiful_Dawn_Designs.jfif?1727553364"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/559/original/20_Fun_and_Cute_Things_to_Crochet.jfif?1727553377"
+          alt=""
+        />
+      </div>
+      <p>
+        Crochet is a process of creating textiles by using a crochet hook to
+        interlock loops of yarn, thread, or strands of other materials. The name
+        is derived from the French term crochet, which means 'hook'. Hooks can
+        be made from a variety of materials, such as metal, wood, bamboo, bone
+        or even plastic. The key difference between crochet and knitting, beyond
+        the implements used for their production, is that each stitch in crochet
+        is completed before the next one is begun, while knitting keeps many
+        stitches open at a time. Some variant forms of crochet, such as Tunisian
+        crochet and broomstick lace, do keep multiple crochet stitches open at a
+        time.
+      </p>
+      <button>
+        <a
+          href="https://youtu.be/aAxGTnVNJiE?si=x5djM-dw9tRehwYu"
+          target="_blank"
+          >Crochet here!</a
+        >
+      </button>
+    </div>
+    <footer>Coded by Resego Motlhasi</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+        //body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
